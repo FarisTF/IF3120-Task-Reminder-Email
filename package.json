@@ -1,0 +1,16 @@
+{
+    "name": "lasti_email_service",
+    "version": "1.0.0",
+    "description": "email sender untuk lasti",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node send_email"
+    },
+    "author": "Kelompok Lasti Ganteng",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.18.2",
+        "nodemailer": "^6.8.0"
+    }
+}

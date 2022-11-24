@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "user_id": 1,
+            "activity": "nonton limit tak hingga",
+            "course_name": "II696 Introduction to Qobul",
+            "deadline": "2022-11-25",
+            "is_done": false
+        },
+
+        {
+            "user_id": 1,
+            "activity": "mengerjakan latihan uas",
+            "course_name": "II696 Introduction to Qobul",
+            "deadline": "2022-11-25",
+            "is_done": false
+        },
+
+        {
+            "user_id": 1,
+            "activity": "berdiskusi di forum",
+            "course_name": "II696 Introduction to Qobul",
+            "deadline": "2022-11-25",
+            "is_done": false
+        },
+        {
+            "user_id": 1,
+            "activity": "nonton piala dunia",
+            "course_name": "II696 Introduction to Qobul",
+            "deadline": "2022-11-25",
+            "is_done": true
+        }
+    ]
+}
