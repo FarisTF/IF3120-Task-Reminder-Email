@@ -13,3 +13,11 @@ npm start
 ```
 
 5. Buka browser anda dan buka http://localhost:4242/todolist
+
+# Testing Menggunakan Postman
+
+### Create - Tambah todolist
+![Create](screenshoot/Create.jpg)
+
+### Read - Ambil semua todolist
+![Read](screenshoot/Read.jpg)
