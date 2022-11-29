@@ -1,7 +1,8 @@
-const dataPath = "./database.json"; // path to our JSON file
+const dataPath = "database.json"; // path to our JSON file
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
+const path = require("path");
 
 // util functions
 const saveTodolistData = (data) => {
@@ -19,6 +20,11 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Send HTML file
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname + "/public/index.html"));
+});
 
 // Create - Tambah todolist
 app.post("/todolist", (req, res) => {
@@ -38,7 +44,7 @@ app.get("/todolist", (req, res) => {
     res.send(todolist);
 });
 
-// Update - using Put method
+// Update - Ubah todolist berdasarkan id
 app.put('/todolist/:id', (req, res) => {
     var existTodolist = getTodolistData()
     fs.readFile(dataPath, 'utf8', (err, data) => {
@@ -49,7 +55,7 @@ app.put('/todolist/:id', (req, res) => {
     }, true);
   });
 
-// delete - using delete method
+// delete - Hapus todolist berdasarkan id
 app.delete('/todolist/delete/:id', (req, res) => {
     fs.readFile(dataPath, 'utf8', (err, data) => {
       var existTodolist = getTodolistData()
