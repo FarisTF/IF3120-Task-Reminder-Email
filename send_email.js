@@ -22,9 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Send HTML file
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname + "/public/index.html"));
-});
+app.use(express.static(__dirname + "/public"));
 
 // Create - Tambah todolist
 app.post("/todolist", (req, res) => {
