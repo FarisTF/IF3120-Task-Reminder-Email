@@ -38,6 +38,28 @@ app.get("/todolist", (req, res) => {
     res.send(todolist);
 });
 
+// Update - using Put method
+app.put('/todolist/:id', (req, res) => {
+    var existTodolist = getTodolistData()
+    fs.readFile(dataPath, 'utf8', (err, data) => {
+      const todoId = req.params['id'];
+      existTodolist[todoId] = req.body;
+      saveTodolistData(existTodolist);
+      res.send(`todo with id ${todoId} has been updated`)
+    }, true);
+  });
+
+// delete - using delete method
+app.delete('/todolist/delete/:id', (req, res) => {
+    fs.readFile(dataPath, 'utf8', (err, data) => {
+      var existTodolist = getTodolistData()
+      const todoId = req.params['id'];
+      delete existTodolist[todoId]; 
+      saveTodolistData(existTodolist);
+      res.send(`todo with id ${todoId} has been deleted`)
+    }, true);
+  })
+
 app.listen(port, () => console.log(`Listening on port ${port}!`));
 
 is_not_done = false;

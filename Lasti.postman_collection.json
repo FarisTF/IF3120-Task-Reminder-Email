@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "b61c49c3-9983-40a6-b4ed-634061a394e3",
+		"name": "Lasti",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24665786"
+	},
+	"item": [
+		{
+			"name": "Read - Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4242/todolist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4242",
+					"path": [
+						"todolist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create - Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"activity\": \"nobar presen imk\",\r\n    \"course_name\": \"II696 Introduction to Qobul\",\r\n    \"deadline\": \"2022-11-29\",\r\n    \"is_done\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4242/todolist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4242",
+					"path": [
+						"todolist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update - Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"activity\": \"nobar presen imk\",\r\n    \"course_name\": \"II696 Introduction to Qobul\",\r\n    \"deadline\": \"2022-11-29\",\r\n    \"is_done\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4242/todolist/269824",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4242",
+					"path": [
+						"todolist",
+						"269824"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete - Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4242/todolist/delete/269824",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4242",
+					"path": [
+						"todolist",
+						"delete",
+						"269824"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
